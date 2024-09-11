@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+h1 {
+  margin-top: 0px;
+  text-align: center;
+}
+#seat-map {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  gap: 5px;
+  margin-bottom: 20px;
+}
+.seat {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* color kursi */
+.available {
+  background-color: #20a4fc;
+}
+.occupied {
+  background-color: #f33e2a;
+}
+.selected {
+  background-color: #2cf17e;
+}
+
+.available:hover,
+.occupied:hover,
+.selected:hover {
+  opacity: 0.9;
+  transition: 0.4s;
+}
+
+.loket {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.loket-btn {
+  margin: 0 5px;
+  padding: 8px 12px;
+  background-color: #ffa601;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+}
+.loket-btn:hover {
+  opacity: 0.9;
+  transition: 0.5s;
+}
+
+#back-btn {
+  display: none;
+  margin-bottom: 10px;
+  background-color: #4133b7;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+#selected-seat {
+  margin-top: 20px;
+  font-size: large;
+}
+
+#book-btn {
+  margin-top: 10px;
+  background-color: #4133b7;
+  color: white;
+  font-size: large;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+#back-btn:hover,
+#book-btn:hover {
+  opacity: 0.9;
+  transition: 0.5s;
+}
+
+.footer {
+  margin-top: 50px;
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+/* responsive */
+@media (max-width: 600px) {
+  .seat {
+    width: 20px;
+    height: 20px;
+  }
+}
